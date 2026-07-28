@@ -7,7 +7,7 @@
 
 /** 网站基础信息（也同步改 src/config.ts 里的 SEO 标题） */
 export const site = {
-  title: "EMIYA · AI 应用开发",
+  title: "成程 · AI 应用开发",
   description:
     "东北大学计算机专业 · 专注大模型应用、RAG 检索增强与多智能体编排 · 求职 AI 应用开发 / 智能体方向",
   url: "https://EMIYAttk.github.io/portfolio",
@@ -16,7 +16,7 @@ export const site = {
 /** 个人简介（首页 Hero + 侧边栏 + CV 页） */
 export const profile = {
   greeting: "你好 👋",
-  name: "EMIYA",
+  name: "成程",
   tagline: "AI 应用开发 · 智能体工程师",
   bio: `东北大学计算机科学与技术专业在读，专注大模型应用、RAG 检索增强与多智能体编排。
 具备从方案设计、后端开发到快速原型验证的完整工程能力，求职 AI 应用开发 / 智能体开发方向实习生。`,
