@@ -1,0 +1,68 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+import { profile, education, competitions, skills } from "../site-content";
+import { path } from "../lib/paths";
+---
+
+<BaseLayout title="CV" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">个人简介</div>
+  </div>
+
+  <div class="mb-10 text-justify whitespace-pre-line">{profile.bio}</div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">教育背景</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    {
+      education.map((item) => (
+        <TimeLineElement title={item.title} subtitle={item.subtitle}>
+          {item.detail}
+        </TimeLineElement>
+      ))
+    }
+  </div>
+
+  <div class="mb-5 flex flex-wrap items-end justify-between gap-3">
+    <div class="text-3xl font-bold">企业实习</div>
+    <a href={path("internship")} class="btn btn-sm btn-outline">查看完整实习经历 →</a>
+  </div>
+
+  <p class="mb-10 text-sm opacity-80 leading-relaxed">
+    AI 中台 RAG 方向：后端契约适配服务、复杂 PDF 解析与语义分块优化。
+    详细场景、方案与贡献见
+    <a href={path("internship")} class="link link-primary">实习经历</a>
+    专页（适合面试前快速回顾）。
+  </p>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">竞赛经历</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    {
+      competitions.map((item) => (
+        <TimeLineElement title={item.title} subtitle={item.subtitle}>
+          {item.detail}
+        </TimeLineElement>
+      ))
+    }
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">技术栈</div>
+  </div>
+
+  <ul class="list-disc md:columns-3 columns-2 mx-6 mb-10">
+    {skills.map((skill) => <li>{skill}</li>)}
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">求职意向</div>
+  </div>
+
+  <p class="mb-10 mx-2">AI 应用开发、智能体开发方向 · 实习生</p>
+</BaseLayout>

@@ -1,0 +1,28 @@
+---
+import SideBarFooter from "./SideBarFooter.astro";
+import SideBarMenu from "./SideBarMenu.astro";
+import { profile } from "../site-content";
+import { path } from "../lib/paths";
+
+const { sideBarActiveItemID } = Astro.props;
+const initial = profile.name.charAt(0).toUpperCase();
+---
+
+<div class="drawer-side z-40">
+  <label for="my-drawer" class="drawer-overlay"></label>
+  <aside class="px-2 pt-2 h-auto min-h-full w-[19rem] bg-base-200 text-base-content flex flex-col">
+    <div class="w-fit mx-auto mt-5 mb-2">
+      <a href={path()}>
+        <div class="avatar placeholder transition ease-in-out hover:scale-[102%] block m-auto">
+          <div class="bg-primary text-primary-content rounded-full w-28 h-28 flex items-center justify-center">
+            <span class="text-4xl font-bold">{initial}</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <p class="text-center font-semibold mb-1">{profile.name}</p>
+    <p class="text-center text-sm opacity-70 mb-4 px-2">{profile.tagline}</p>
+    <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
+    <SideBarFooter />
+  </aside>
+</div>
