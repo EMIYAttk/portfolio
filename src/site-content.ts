@@ -17,7 +17,7 @@ export const site = {
 export const profile = {
   greeting: "你好 👋",
   name: "成程",
-  tagline: "AI 应用开发 · 智能体工程师",
+  tagline: "AI 应用开发 · 智能体方向",
   bio: `东北大学计算机科学与技术专业在读，专注大模型应用、RAG 检索增强与多智能体编排。
 具备从方案设计、后端开发到快速原型验证的完整工程能力，求职 AI 应用开发 / 智能体开发方向实习生。`,
   github: "https://github.com/EMIYAttk",
@@ -42,12 +42,7 @@ export const featuredProjects = [
     url: "https://github.com/EMIYAttk/my-llm_projectB",
     badge: "架构",
   },
-  {
-    title: "工业多智能体辅助设计",
-    desc: "CrewAI 多智能体 + LoRA 微调 CAD 代码生成，vLLM 本地部署，省级双创项目结题。",
-    url: "",
-    badge: "省级双创",
-  },
+
 ];
 
 /** CV 页 — 教育背景 */
@@ -104,18 +99,16 @@ export const competitions = [
 /** CV 页 — 技能列表 */
 export const skills = [
   "LangChain / LangGraph",
-  "CrewAI",
+  "CrewAI多智能体角色编排与任务分解",
   "RAG 检索增强",
   "Prompt 工程",
   "Agent 编排",
-  "工具调用",
+  "Function Calling",
   "LoRA 微调",
   "vLLM",
   "FastAPI",
-  "Python",
   "ChromaDB",
   "Docker",
-  "Git",
   "Linux",
   "MySQL",
   "Three.js",
@@ -140,20 +133,13 @@ export const allProjects = [
     badge: "Skill 架构",
     tags: ["Agent", "MCP"],
   },
-  {
-    title: "工业多智能体辅助设计软件",
-    desc: `省级双创项目负责人。CrewAI 多智能体协同 + 自建 NL→CAD 数据集 LoRA 微调 Qwen2.5-Coder；
-vLLM 本地部署推理提速 40%+；FastAPI + Three.js 全链路 Demo（输入→3D 预览→下载）。`,
-    url: "",
-    badge: "省级结题",
-    tags: ["CrewAI", "vLLM", "LoRA"],
-  },
+
 ];
 
 /** 首页数据亮点 */
 export const highlights = [
   { value: "985", label: "东北大学" },
   { value: "551", label: "CET-6" },
-  { value: "国一", label: "机器人 AI 大赛" },
-  { value: "省级", label: "双创结题" },
+  { value: "国家一等奖", label: "中国机器人及人工智能大赛" },
+
 ];
